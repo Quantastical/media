@@ -3,7 +3,7 @@ const package = require("./package")
 
 const appName = package.name.toUpperCase()
 const appVersion = package.version
-const mediaOptions = [ "Quit" ]
+const mediaOptions = [ "Movies" ]
 
 console.clear = function () {
 	return process.stdout.write("\033c")
@@ -21,13 +21,15 @@ console.prompt = function ( message, callback ) {
 	process.stdin.setEncoding("utf8")
 	process.stdin.on("data", function(data) {
 		process.stdin.pause()
-		callback(data)
+		callback(data.trim())
 	})
 }
 
 var showMenu = function(menuTitle, menuOptions, message) {
 	console.clear()
 	console.log( menuTitle )
+
+	menuOptions.push("Quit")
 
 	for( var i = 0; i < menuOptions.length; i++ ) {
 		var optionNumber = i + 1
@@ -41,26 +43,29 @@ var showMenu = function(menuTitle, menuOptions, message) {
 		console.log(message)
 
 	console.prompt(
-		"Pick a menu option: ",
+		"#> ",
 		function(input) {
-			if( isNaN(input) ) {
-				var message = colors.red(colors.bold("Error:"), "You must enter a number.")
-				return showMenu(menuTitle, menuOptions, message)
+			var selectedOption = menuOptions.filter(function(menuOption, index) {
+				if( isNaN(input) ){
+					return menuOption.toLowerCase() == input.toLowerCase()
+				}
+				else
+					return input == index + 1
+			});
+
+			if( !selectedOption.length ) {
+				var message = colors.red(colors.bold("Error:"), "You entered an invalid option (" + input.toLowerCase() + ")")
+				return showMenu(menuTitle, menuOptions.filter(function(menuOption) {
+					return menuOption.toLowerCase() != "quit"
+				}), message)
 			}
 
-			var selectedOptionNumber = Number(input)
-			if( selectedOptionNumber < 1 || selectedOptionNumber > menuOptions.length ) {
-				var message = colors.red(colors.bold("Error:"), "You entered an invalid option.")
-				return showMenu(menuTitle, menuOptions, message)
-			}
-
-			var selectedMenu = menuOptions[selectedOptionNumber - 1]
-			console.log( "You selected %s", selectedMenu )
+			console.log( "You selected %s", selectedOption[0] )
 			process.exit()
 		}
 	)
 }
 
-var mainMenuTitle = colors.bold.blue.underline(appName, `v${appVersion}`, "\n")
+var mainMenuTitle = colors.bold.blue.underline(appName) + "\n"
 var mainMenuOptions = mediaOptions
 showMenu( mainMenuTitle, mainMenuOptions )
