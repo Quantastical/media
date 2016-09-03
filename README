@@ -4,36 +4,39 @@ media
 Getting Started
 ---------------
 
-1. Navigate to the directory where the media app will live.
+1. Downloading the App
+----------------------
+
+Navigate to the directory where the media app will live.
 
 **Terminal:**
 
-Navigate to the user's `Applications` folder
+*In macOS, it is recommended to start in the user's `Applications` folder*
 
 ```cd ~/Applications
 
-2. Download the media repository to the local media directory.
+Download the media repository to the local media directory.
 
 **Terminal:**
 
-The following step requires [Git](https://git-scm.com)
+*The following step requires [Git](https://git-scm.com)*
 
 ```git clone https://github.com/quantastical/media
 
-3. Verify that the repository was downloaded properly.
+Verify that the repository was downloaded properly.
 
 **Terminal:**
 
 ```open README
 
-Updating
---------
+2. Updating the App
+-------------------
 
-1. Update the local media directory with the latest changes in the repository.
+Update the local media directory with the latest changes in the repository.
 
 **Terminal:**
 
-The following step requires [Git](https://git-scm.com)
+*The following step requires [Git](https://www.git-scm.com)*
 
 ```cd ~/Applications/media
 ```git pull
