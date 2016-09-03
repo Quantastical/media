@@ -1,1 +1,27 @@
-Hello, world!
+media
+=====
+
+Getting Started
+---------------
+
+1. Navigate to the directory where the media app will live.
+
+**Terminal:**
+
+Navigate to the user's `Applications` folder
+
+```cd ~/Applications
+
+2. Download the media repository to the local media directory.
+
+**Terminal:**
+
+The following step requires [Git](https://git-scm.com)
+
+```git clone https://github.com/quantastical/media
+
+3. Verify that the repository was downloaded properly.
+
+**Terminal:**
+
+```open README
