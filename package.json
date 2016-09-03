@@ -1,7 +1,7 @@
 {
   "name": "media",
-  "version": "0.0.9",
-  "description": "media =====",
+  "version": "0.0.10",
+  "description": "",
   "main": "media.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/Quantastical/media/issues"
   },
-  "homepage": "https://github.com/Quantastical/media#readme",
+  "homepage": "https://github.com/Quantastical/media",
   "dependencies": {
     "colors": "^1.1.2"
   }
