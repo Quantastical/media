@@ -1,4 +1,9 @@
-appName = "Media"
-appVersion = "0.0.7"
+const appName = "Media"
+const appVersion = "0.0.8"
 
-console.log( appName, appVersion )
+console.clear = function () {
+	return process.stdout.write('\033c');
+}
+
+console.clear()
+console.log( appName, `v${appVersion}` )
