@@ -40,3 +40,13 @@ Update the local media directory with the latest changes in the repository.
 
 ```cd ~/Applications/media
 ```git pull
+
+3. Starting the App
+-------------------
+
+**Terminal:**
+
+*The following step requires [NodeJS](https://www.nodejs.org)*
+
+```cd ~/Applications/media
+```node media
