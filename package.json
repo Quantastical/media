@@ -1,0 +1,19 @@
+{
+  "name": "media",
+  "version": "0.0.6",
+  "description": "An app for managing media",
+  "main": "media.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quantastical/media.git"
+  },
+  "author": "Jeff Jenkins <jeff@quantastical.com> (https://www.quantastical.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Quantastical/media/issues"
+  },
+  "homepage": "https://github.com/Quantastical/media"
+}
