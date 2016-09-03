@@ -41,7 +41,17 @@ Update the local media directory with the latest changes in the repository.
 ```cd ~/Applications/media
 ```git pull
 
-3. Starting the App
+3. Installing the App
+---------------------
+
+**Terminal:**
+
+*The following step requires [Node Package Manager](https://www.npmjs.com)*
+
+```cd ~/Applications/media
+```npm install
+
+4. Starting the App
 -------------------
 
 **Terminal:**
