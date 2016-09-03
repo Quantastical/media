@@ -25,3 +25,15 @@ The following step requires [Git](https://git-scm.com)
 **Terminal:**
 
 ```open README
+
+Updating
+--------
+
+1. Update the local media directory with the latest changes in the repository.
+
+**Terminal:**
+
+The following step requires [Git](https://git-scm.com)
+
+```cd ~/Applications/media
+```git pull
